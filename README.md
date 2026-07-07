@@ -1,7 +1,7 @@
 # AlphabetIndex Fast Scroll RecyclerView
 A Powerful AlphabetIndex FastScroller for Android's RecyclerView! 
 
-[![](https://jitpack.io/v/myinnos/AlphabetIndex-Fast-Scroll-RecyclerView.svg)](https://jitpack.io/#myinnos/AlphabetIndex-Fast-Scroll-RecyclerView) [![MyInnos website](https://img.shields.io/badge/visit-website-red.svg?logo=firefox)](https://www.myinnos.in/) [![](https://jitpack.io/v/jitpack/maven-simple/month.svg)](https://jitpack.io/#myinnos/AlphabetIndex-Fast-Scroll-RecyclerView) <a href="#"><img alt="Android Language Badge" src="https://badgen.net/badge/OS/Android?icon=https://raw.githubusercontent.com/androiddevnotes/awesome-jetpack-compose-android-apps/master/assets/android.svg&color=3ddc84"/></a>
+[![](https://jitpack.io/v/DEVMMZ/AlphabetIndex-Fast-Scroll-RecyclerView.svg)](https://jitpack.io/#DEVMMZ/AlphabetIndex-Fast-Scroll-RecyclerView) [![MyInnos website](https://img.shields.io/badge/visit-website-red.svg?logo=firefox)](https://www.myinnos.in/) [![](https://jitpack.io/v/jitpack/maven-simple/month.svg)](https://jitpack.io/#DEVMMZ/AlphabetIndex-Fast-Scroll-RecyclerView) <a href="#"><img alt="Android Language Badge" src="https://badgen.net/badge/OS/Android?icon=https://raw.githubusercontent.com/androiddevnotes/awesome-jetpack-compose-android-apps/master/assets/android.svg&color=3ddc84"/></a>
 
 
   ![AlphabetIndex-Fast-Scroll-RecyclerView - Example1](https://raw.githubusercontent.com/myinnos/AlphabetIndex-Fast-Scroll-RecyclerView/0d6c4f2f0b9f3b573a4f2abf2c87b62237081286/images-gif/AlphabetIndex-Fast-Scroll-RecyclerView_1.gif)
@@ -22,13 +22,10 @@ allprojects {
 And then in the other gradle file(may be your app gradle or your own module library gradle, but never add in both of them to avoid conflict.)
 ```java
 dependencies {
-       implementation 'com.github.myinnos:AlphabetIndex-Fast-Scroll-RecyclerView:2.0'
+       implementation 'com.github.DEVMMZ:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.0'
 
-    // AppCompat version
-    // implementation 'com.github.myinnos:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.92'
-    //	or
-    // AndroidX version
-    // implementation 'com.github.myinnos:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.95'
+    // Use the Git tag as the version, for example:
+    // implementation 'com.github.DEVMMZ:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.0'
 
 }
 ```          
