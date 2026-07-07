@@ -2,17 +2,17 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
-
 final ANDROIDX = '1.0.0'
 final BUTTERKNIFE = '10.1.0'
 
 android {
-    compileSdkVersion 33
+    namespace "in.myinnos.indexfastscrollrecycler"
+    compileSdk 34
 
     defaultConfig {
         applicationId "in.myinnos.indexfastscrollrecycler"
-        minSdkVersion 15
-        targetSdkVersion 33
+        minSdk 15
+        targetSdk 34
         versionCode 1
         versionName "1.0"
     }
@@ -28,6 +28,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     buildFeatures {
         dataBinding true
     }
@@ -37,7 +41,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${ANDROIDX}"
     implementation "com.google.android.material:material:${ANDROIDX}"
     implementation "com.jakewharton:butterknife:${BUTTERKNIFE}"
-    annotationProcessor "com.jakewharton:butterknife-compiler:${BUTTERKNIFE}"
+    kapt "com.jakewharton:butterknife-compiler:${BUTTERKNIFE}"
     implementation project(':alphabetsindexfastscrollrecyclerLibrary')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.10.0'

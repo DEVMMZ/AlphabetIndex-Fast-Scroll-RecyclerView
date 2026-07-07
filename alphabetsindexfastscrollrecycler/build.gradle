@@ -6,11 +6,12 @@ final ANDROIDX = '1.0.0'
 group='com.github.jitpack'
 
 android {
-    compileSdkVersion 33
+    namespace "in.myinnos.alphabetsindexfastscrollrecycler"
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 33
+        minSdk 15
+        targetSdk 34
         versionCode 1
         versionName "1.0"
     }
@@ -20,14 +21,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 allprojects {
     repositories {
         mavenCentral()
-        maven {
-            url "https://maven.google.com"
-        }
+        google()
     }
 }
 
@@ -41,19 +44,18 @@ dependencies {
 // build a jar with source files
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
+    archiveClassifier.set('sources')
 }
 
 task javadoc(type: Javadoc) {
     failOnError  false
     source = android.sourceSets.main.java.sourceFiles
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    classpath += configurations.implementation
+    classpath += files(*android.bootClasspath)
 }
 
 // build a jar with javadoc
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    archiveClassifier.set('javadoc')
     from javadoc.destinationDir
 }
 

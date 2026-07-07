@@ -251,14 +251,7 @@ import androidx.recyclerview.widget.RecyclerView
             // Intercept ListView's touch event
             if (mScroller != null && mScroller!!.onTouchEvent(ev)) return true
             if (mGestureDetector == null) {
-                mGestureDetector = GestureDetector(context, object : SimpleOnGestureListener() {
-                    override fun onFling(
-                        e1: MotionEvent, e2: MotionEvent,
-                        velocityX: Float, velocityY: Float
-                    ): Boolean {
-                        return super.onFling(e1, e2, velocityX, velocityY)
-                    }
-                })
+                mGestureDetector = GestureDetector(context, SimpleOnGestureListener())
             }
             mGestureDetector?.onTouchEvent(ev)
         }
