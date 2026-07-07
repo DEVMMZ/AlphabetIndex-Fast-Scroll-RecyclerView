@@ -22,10 +22,10 @@ allprojects {
 And then in the other gradle file(may be your app gradle or your own module library gradle, but never add in both of them to avoid conflict.)
 ```java
 dependencies {
-       implementation 'com.github.DEVMMZ:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.0'
+       implementation 'com.github.DEVMMZ:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.0-rc1'
 
     // Use the Git tag as the version, for example:
-    // implementation 'com.github.DEVMMZ:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.0'
+    // implementation 'com.github.DEVMMZ:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.0-rc1'
 
 }
 ```          
